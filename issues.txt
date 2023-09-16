@@ -18,7 +18,7 @@
 15.     base64.c line 11: move curly bracket down from function
 16.     base64.c line 33:  change NULL to '\0’
 17.     base64.c line 68: removed obvious decode tokens comment
-18.     base64.c line 103: changed TokenString to a valid variable
+18.     base64.c line 21: Comment /* should go above multiple line comment
 19.     base64.c line 109: added int to unsigned variable
 20.     base64.c line 110: added int to unsigned variable
 21.     Makefile: fix to work with new base64 name
