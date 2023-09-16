@@ -1,0 +1,38 @@
+//John Paul Saia
+// found 35 errors code review
+
+1.      main.c line 11: move type above the name on function
+2.      main.c line 12: move curly bracket down from function
+3.      main.c line 14: move */ at end of comment down a line to line 15
+4.      main.c line 18: move int and main() to be on the same line
+5.      main.c line 34: change exit error to (1) instead of (0)
+6.      main.c lines 50 to 60: indent the switch statements correctly
+7.      main.c line 64: move curly bracket up beside the for statement
+8.      main.c line 68: move curly bracket up to if statement
+9.      main.c lines 75 to 83: indent switch statement correctly
+10.     main.c line 86: remove exit comment
+11.     main.h: add #include <stdio.h>
+12.     main.h: add file protection to the file
+13.     main.h: remove variable names from the functions
+14.     base64.c: change name to base64
+15.     base64.c line 44: move curly bracket down from function
+16.     base64.c line 33:  change NULL to '\0’
+17.     base64.c line 68: removed obvious decode tokens comment
+18.     base64.c line 103: changed TokenString to a valid variable
+19.     base64.c line 109: added int to unsigned variable
+20.     base64.c line 110: added int to unsigned variable
+21.     Makefile: fix to work with new base64 name
+22.     uu.c line 54: remove register from variable
+23.     uu.c line 55: remove register from variable
+24.     uu.c line 58: move curly bracket to while loop
+25.     uu.c line 64: move curly bracket to for loops
+26.     uu.c line 65: fix indentation of for loop
+27.     uu.c line 85: move curly bracket 
+28.     uu.c line 105: remove comment
+29.     uu.c line 13 and 15: put ints on same line
+30.     uu.c line 117 and 116: fix indentation
+31.     uu.c line 125: remove spaces within the parenthesis
+32.     uu.c line 166: remove comment
+33.     uu.c lines 152 and 153: shrink if statement to fit on 2 lines
+34.     uu.c lines 170: fix if statement to have the curly brackets
+35.     uu.c line 181: move else statement up one line
