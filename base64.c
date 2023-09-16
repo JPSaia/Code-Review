@@ -30,7 +30,7 @@ base64_encode(const void *data, int size)
   const unsigned char *q;
 
   p = s = (char *) malloc(size * 4 / 3 + 4);
-  if (p == NULL) {
+  if (p == '\0') {
     return NULL;
   }
   q = (const unsigned char *) data;
@@ -65,8 +65,7 @@ base64_encode(const void *data, int size)
 
 #define DECODE_ERROR 0xffffffff
 	@@ -109,58 +102,57 @@ base64Encode(const void *data, int size)
- * Decode the tokens.
- */
+
 static unsigned int
 token_decode(const char *TokenString)
 {
@@ -106,8 +105,8 @@ base64_decode(const char *str)
 
   q = data;
   for (p = str; *p && (*p == '=' || strchr(base64_chars, *p)); p += 4) {
-    unsigned val = token_decode(p);
-    unsigned marker = (val >> 24) & 0xff;
+    int unsigned val = token_decode(p);
+    int unsigned marker = (val >> 24) & 0xff;
     if (val == DECODE_ERROR) {
       return 0;
     }
