@@ -15,7 +15,7 @@
 12.     main.h: add file protection to the file
 13.     main.h: remove variable names from the functions
 14.     base64.c: change name to base64
-15.     base64.c line 44: move curly bracket down from function
+15.     base64.c line 11: move curly bracket down from function
 16.     base64.c line 33:  change NULL to '\0’
 17.     base64.c line 68: removed obvious decode tokens comment
 18.     base64.c line 103: changed TokenString to a valid variable
