@@ -51,20 +51,18 @@
 void
 encode (FILE *fp)
 {
-    register int ch, n;
-    register char *p;
+    int ch, n;
+    char *p;
     char buf[80];
  
-    while ((n = fread (buf, 1, 45, fp)) != 0)
-      {
+    while ((n = fread (buf, 1, 45, fp)) != 0) {
         ch = ENC (n);
         if (putchar (ch) == EOF) {
             break;
         }
-        for (p = buf; n > 0; n -= 3, p += 3)
-          {
-        ch = *p >> 2;
-        ch = ENC (ch);
+        for (p = buf; n > 0; n -= 3, p += 3){
+          ch = *p >> 2;
+          ch = ENC (ch);
         if (putchar (ch) == EOF) {
             break;
         }
@@ -83,7 +81,7 @@ encode (FILE *fp)
         if (putchar (ch) == EOF) {
             break;
         }
-          }
+      }
         if (putchar ('\n') == EOF) {
             break;
         }
@@ -110,9 +108,8 @@ int
 decode (char *filename, FILE *fpin)
 {
     struct passwd *pw;
-    int n;
+    int n, mode, n1;
     char ch, *p;
-    int mode, n1;
     char buf[2 * BUFSIZ];
     char *outname;
  
@@ -122,7 +119,7 @@ decode (char *filename, FILE *fpin)
             fprintf (stderr,
                     "no \"begin\" line\n");
             return 1;
-        }
+    }
     }
     while (strncmp (buf, "begin ", 6) != 0);
  
@@ -163,7 +160,6 @@ decode (char *filename, FILE *fpin)
         return 1;
     }
  
-    /* for each input line */
     while (1) {
         if (fgets (buf, sizeof(buf), fpin) == NULL) {
             fprintf (stderr, "%s: short file.\n", filename);
